@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Second Page</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+      
+        <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="secondpage.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
+    </head>
+    <body background="background.jpg">
+
+      
+            <div >
+                <p>Guess The Country</p>
+        </div>
+   
+    <center> 
+        <div class="container">
+            <label><b>Name: </b></label>
+            <form action="gamepage.html">
+            <input type="text" placeholder="Enter Name" name="username" id="playerName" class="input" required>
+            <button type="submit" class="button" onclick="submitName()">Play</button>
+            </form>
+            <label id="context">*This will be your name that goes on the leaderboard</label>
+
+            <script>
+                function submitName() {
+                    const playerName = document.getElementById('playerName').value;
+                    if (playerName) {
+                        localStorage.setItem('currentPlayer', playerName);
+                        window.location.href = 'gamepage.html'; 
+                    }
+                }
+            </script>
+
+        </div>
+
+       
+    </center>
+    <script src="gamepage.js"></script>
+    </body>
+</html>
