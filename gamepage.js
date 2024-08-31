@@ -83,7 +83,7 @@ window.onload = function() {
         getQuestions();
         timeSpan = document.querySelector('.time span');
         scoreDiv.style.display = 'none';
-        let duration = 30; // Set to 60 seconds for the full game
+        let duration = 60; // Set to 60 seconds for the full game
         startCountdown(duration, timeSpan);
      
         
