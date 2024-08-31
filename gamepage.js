@@ -21,7 +21,7 @@ function getQuestions() {
             console.log(questions);
 
             // Number of Seconds per game
-            let duration = 30;
+            let duration = 60;
             questions = questions.sort(() => Math.random() - Math.random()).slice(0, 85);
             addQuestionData(questions[currentIndex], duration);
 
